@@ -35,7 +35,7 @@ console.log('~ 5: ', (~ 5)); // -6
 console.log('5 ^ 1: ', (5 ^ 1)); // 4
 console.log('5 << 1: ' + (5 << 1)); // 1
 console.log('5 >> 1: ' + (5 >> 1)); // 2
-console.log(9 << 2);
+console.log(15 & 5); // 5
 
 // teste com duas variáveis de valores true e false
 var a = true;
