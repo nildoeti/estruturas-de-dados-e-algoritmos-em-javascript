@@ -8,29 +8,31 @@
     object          true
 */
 
-function funcaoVerdadeFalso(valor) { // variável valor sendo usado como parâmentro para a função
-    if (valor) { // parâmentro para valor true
-        console.log('é verdade'); // exibe 'é verdade'
-    } else { // parâmentro para valor false
-        console.log('é falso'); // exibe 'é falso'
-    }
+function verdadeFalso(valor) {
+  if (valor) { // parâmentro para valor true
+    console.log("é verdade"); // exibe 'é verdade'
+  } else { // parâmentro para valor falso
+    console.log("é falso"); // exibe 'é falso'
+  }
 }
 
-funcaoVerdadeFalso(true); // é verdade
-funcaoVerdadeFalso(false); // é falso
-funcaoVerdadeFalso(''); //  é falso, pois a string esta vazia
-funcaoVerdadeFalso('qualquer valor de string'); // verdade, pois a string não esta vazia
-funcaoVerdadeFalso(1); // é verdade
-funcaoVerdadeFalso(-1); // é verdade
-funcaoVerdadeFalso(NaN); // é falso
-funcaoVerdadeFalso({}); // é verdade, pois é um objeto
+verdadeFalso(true); // é veradde
+verdadeFalso(false); // é falso
+verdadeFalso(''); // é falso, pois esta vazio
+verdadeFalso(); // é falso, pois esta vazio
+verdadeFalso('Qualquer valor como string'); // é verdade, pois não esta vazia
+verdadeFalso(1); // true
+verdadeFalso(-1); // é verdade
+verdadeFalso(NaN); // é falso
+verdadeFalso({}); // é verdade pois é um objeto
 
-// não use booleano como construtor em produção de sofware, apenas para fins de teste
-funcaoVerdadeFalso(new Number(NaN)); // é verdade, pois é um objeto
-funcaoVerdadeFalso(new String('')); // é verdade, objetos são sempre true
-funcaoVerdadeFalso(new Boolean(false)); // é verdade, objetos são sempre true
+// não usar booleano como construtor em produção de software
+// exemplos para fins de teste
+// verdadeFalso(new Number(NaN)); // é verdade pois é um objeto
+// verdadeFalso(new String('')); // é verdade, pois objetos são sempre true
+// verdadeFalso(new Boolean(false)); // é verdade pois objetos são sempre true
 
 var objeto = {nome: 'Ana'};
-funcaoVerdadeFalso(objeto); // é verdade, pois é um objeto
-funcaoVerdadeFalso(objeto.nome); // é verdade pos a variável nome faz parte do objeto
-funcaoVerdadeFalso(objeto.idade); // é falso, pois a variável idade não faz parte do objeto
+verdadeFalso(objeto); // é verdade pois é um objeto
+verdadeFalso(objeto.nome); // é verdade, pois a variável nome faz parte do objeto
+verdadeFalso(objeto.idade); // é falso pois a variável idade não faz parte do objeto
